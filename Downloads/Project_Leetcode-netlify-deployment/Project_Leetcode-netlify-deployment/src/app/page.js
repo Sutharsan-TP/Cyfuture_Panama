@@ -102,8 +102,8 @@ export default function Page() {
     if (!contestData) return { found: [], notFound: [] }
     
     const allUsers = [
-      ...contestData.found_users.map(user => ({ ...user, participated: true })),
-      ...contestData.not_found_users.map(user => ({ ...user, participated: false }))
+      ...(contestData.found_users || []).map(user => ({ ...user, participated: true })),
+      ...(contestData.not_found_users || []).map(user => ({ ...user, participated: false }))
     ]
 
     const sortedUsers = [...allUsers].sort((a, b) => {
@@ -262,7 +262,7 @@ export default function Page() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm font-medium text-gray-600">Total Users</p>
-                    <p className="text-3xl font-bold text-gray-900">{contestData.summary.target_users}</p>
+                    <p className="text-3xl font-bold text-gray-900">{contestData?.summary?.target_users || 0}</p>
                   </div>
                   <div className="text-4xl">👥</div>
                 </div>
@@ -272,7 +272,7 @@ export default function Page() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm font-medium text-gray-600">Participated</p>
-                    <p className="text-3xl font-bold text-green-600">{contestData.summary.found_users}</p>
+                    <p className="text-3xl font-bold text-green-600">{contestData?.summary?.found_users || 0}</p>
                   </div>
                   <div className="text-4xl">✅</div>
                 </div>
@@ -282,7 +282,7 @@ export default function Page() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm font-medium text-gray-600">Did Not Participate</p>
-                    <p className="text-3xl font-bold text-red-600">{contestData.summary.not_found_users}</p>
+                    <p className="text-3xl font-bold text-red-600">{contestData?.summary?.not_found_users || 0}</p>
                   </div>
                   <div className="text-4xl">❌</div>
                 </div>
@@ -292,7 +292,7 @@ export default function Page() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm font-medium text-gray-600">Success Rate</p>
-                    <p className="text-3xl font-bold text-yellow-600">{contestData.summary.success_rate}</p>
+                    <p className="text-3xl font-bold text-yellow-600">{contestData?.summary?.success_rate || '0%'}</p>
                   </div>
                   <div className="text-4xl">🎯</div>
                 </div>
@@ -304,7 +304,7 @@ export default function Page() {
               <div className="px-6 py-4 bg-gray-50 border-b">
                 <div className="flex items-center justify-between mb-2">
                   <h2 className="text-2xl font-semibold text-gray-900">
-                    🏅 Contest {selectedContest} - {contestData.contest.title}
+                    🏅 Contest {selectedContest} - {contestData?.contest?.title || 'Loading...'}
                   </h2>
                   <div className="text-sm text-gray-600 bg-white px-3 py-1 rounded-full border">
                     📊 Sorted by: <span className="font-medium capitalize">{sortConfig.key.replace('_', ' ')}</span> 
@@ -312,8 +312,8 @@ export default function Page() {
                   </div>
                 </div>
                 <p className="text-sm text-gray-600">
-                  {new Date(contestData.contest.start_time).toLocaleString()} | 
-                  Total Participants: {contestData.contest.total_participants?.toLocaleString() || 'N/A'}
+                  {contestData?.contest?.start_time ? new Date(contestData.contest.start_time).toLocaleString() : 'Loading...'} | 
+                  Total Participants: {contestData?.contest?.total_participants?.toLocaleString() || 'N/A'}
                 </p>
                 <p className="text-xs text-blue-600 mt-2">
                   💡 Click on any column header to sort the data
