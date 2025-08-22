@@ -1,13 +1,25 @@
-transformers
-optimum
-onnx
-onnxruntime
-torch
-pillow
-pytesseract
-python-dotenv
-google-generativeai
-huggingface_hub
-pymupdf
-flask
-werkzeug
+# Core Flask dependencies
+flask>=2.3.0
+werkzeug>=2.3.0
+
+# Image and document processing
+pillow>=10.0.0
+pytesseract>=0.3.10
+pymupdf>=1.23.0
+
+# AI and ML dependencies
+google-generativeai>=0.3.0
+transformers>=4.30.0
+optimum>=1.12.0
+onnx>=1.14.0
+onnxruntime>=1.15.0
+torch>=2.0.0
+huggingface_hub>=0.16.0
+
+# Report generation
+reportlab>=4.0.0
+weasyprint>=60.0
+markdown>=3.5.0
+
+# Utilities
+python-dotenv>=1.0.0
