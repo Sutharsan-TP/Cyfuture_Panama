@@ -1,0 +1,30 @@
+{
+  "model_type": "sklearn",
+  "hf_model_dir": "models/hf",
+  "hf_max_len": 512,
+  "zsh_model": "facebook/bart-large-mnli",
+  "zsh_labels": [
+    "plaintiff_wins",
+    "defendant_wins"
+  ],
+  "zsh_max_len": 512,
+  "llm_model": "opennyaiorg/Aalap-Mistral-7B-v0.1-bf16",
+  "llm_labels": [
+    "plaintiff_wins",
+    "defendant_wins"
+  ],
+  "llm_max_input": 2048,
+  "llm_max_new_tokens": 32,
+  "gemini_model": "gemini-1.5-flash",
+  "gemini_labels": [
+    "plaintiff_wins",
+    "defendant_wins"
+  ],
+  "hf_api_model": "meta-llama/Llama-3.2-3B-Instruct",
+  "hf_api_labels": [
+    "plaintiff_wins",
+    "defendant_wins"
+  ],
+  "hf_api_max_tokens": 1000,
+  "debug_errors": false
+}

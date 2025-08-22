@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+
+# Models and data artifacts
+models/*.pkl
+models/*.joblib
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

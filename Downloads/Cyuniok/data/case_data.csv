@@ -1,0 +1,11 @@
+summary,outcome
+"The plaintiff alleges breach of contract after the defendant failed to deliver goods as agreed.",plaintiff_wins
+"Defendant moves to dismiss, arguing lack of jurisdiction and improper service.",defendant_wins
+"After a traffic collision, the plaintiff sues for negligence and the jury finds liability.",plaintiff_wins
+"Court finds the plaintiff failed to state a claim upon which relief can be granted.",defendant_wins
+"Tenant sues landlord for habitability issues; inspector reports numerous violations.",plaintiff_wins
+"Summary judgment granted for defendant due to statute of limitations.",defendant_wins
+"Employee alleges wrongful termination and retaliation; evidence supports pretext.",plaintiff_wins
+"Patent infringement case where prior art invalidates the asserted claims.",defendant_wins
+"Consumer protection action shows deceptive advertising with documented harm.",plaintiff_wins
+"Insurance coverage dispute resolved in favor of the insurer based on policy exclusions.",defendant_wins
