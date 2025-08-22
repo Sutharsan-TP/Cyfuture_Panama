@@ -1,0 +1,18 @@
+[
+    {
+        "clause_title": "1. Definitions",
+        "clause_text": "For purposes of this Agreement, the following terms shall have the meanings specified below:\n\nAgreement means this Agreement and any schedules or exhibits attached hereto.\n\nParty means either party to this Agreement.\n\nEffective Date means the date first written above."
+    },
+    {
+        "clause_title": "2. Purpose",
+        "clause_text": "The parties wish to establish a business relationship in connection with [describe purpose]."
+    },
+    {
+        "clause_title": "3. Term",
+        "clause_text": "The term of this Agreement shall commence on the Effective Date and continue for a period of [number] months unless terminated earlier as provided herein. This Agreement shall automatically renew for successive terms of [number] months, unless either party provides written notice of non-renewal at least thirty (30) days prior to the end of the then-current term."
+    },
+    {
+        "clause_title": "4. Termination",
+        "clause_text": "Either party may terminate this Agreement upon thirty (30) days' written notice to the other party. In addition, either party may terminate this Agreement immediately upon written notice if the other party breaches any material term of this Agreement and fails to cure such breach within fifteen (15) days after receipt of written notice of such breach. Upon termination, each party shall return or, at the request of the other party, destroy all Confidential Information of the other party in its possession or control."
+    }
+]

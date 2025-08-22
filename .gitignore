@@ -1,0 +1,20 @@
+# Env/secrets
+.env
+/env
+.env.*
+
+# Caches
+__pycache__/
+*.pyc
+
+# Models & caches
+models/
+onnx-models/
+
+# Data outputs
+Documents/*.txt
+documents/*.json
+
+# Node artifacts (if any)
+node_modules/
+package-lock.json

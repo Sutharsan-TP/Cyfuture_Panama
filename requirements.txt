@@ -1,0 +1,13 @@
+transformers
+optimum
+onnx
+onnxruntime
+torch
+pillow
+pytesseract
+python-dotenv
+google-generativeai
+huggingface_hub
+pymupdf
+flask
+werkzeug

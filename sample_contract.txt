@@ -1,0 +1,38 @@
+AGREEMENT
+
+1. DEFINITIONS
+
+For purposes of this Agreement, the following terms shall have the
+meanings specified below:
+
+Agreement means this Agreement and any schedules or
+exhibits attached hereto.
+
+Party means either Party to this Agreement.
+Effective Date means the date first written above.
+
+2. PURPOSE
+
+The Partles wish to estabblish a business relationship in connection
+with [describe purpose].
+
+3. TERM
+
+The term of this Agreement shall commence on the Effective Date
+and continue for a period of [number] months unless terminated
+earlier as provided herein. This Agreement shall automatically
+renew for successive terms of [number] months, unless either
+Party provides written notice of non-renewal at least thirty (30)
+days prior to the end of the then-current term.
+
+4, TERMINATION
+
+Either Party may terminate this Agreement upon thirty (30) days
+written notice to the other Party. In addition, either Party may
+terminate this Agreement immediately upon written notice if the
+other Party breaches any material term of this Agreement and
+falls to cure such breach within fifteen (15) days after receipt of
+written notice of such breach. Upon termination, each Party
+shall return or, at the request of the other Party, destroy all
+Confidential Information of the other Party in its possession or
+control.

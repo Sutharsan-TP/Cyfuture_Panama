@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamite Legal AI - Contract Intelligence</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-gavel"></i>
+                <h1>Dynamite Legal AI</h1>
+            </div>
+            <p class="tagline">Transform contracts into structured insights</p>
+        </header>
+
+        <!-- Upload Section -->
+        <section class="upload-section" id="uploadSection">
+            <div class="upload-card">
+                <div class="upload-area" id="uploadArea">
+                    <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                    <h3>Upload Contract</h3>
+                    <p>Drag & drop your contract here or click to browse</p>
+                    <p class="file-types">Supports: PDF, PNG, JPG (Max 50MB)</p>
+                    <input type="file" id="fileInput" accept=".pdf,.png,.jpg,.jpeg" hidden>
+                    <button class="upload-btn">
+                        <i class="fas fa-folder-open"></i> Choose File
+                    </button>
+                </div>
+                <div class="file-info" id="fileInfo" style="display: none;">
+                    <div class="file-details">
+                        <i class="fas fa-file-alt"></i>
+                        <div>
+                            <span class="file-name" id="fileName"></span>
+                            <span class="file-size" id="fileSize"></span>
+                        </div>
+                    </div>
+                    <button class="process-btn" id="processBtn">
+                        <i class="fas fa-cogs"></i> Process Contract
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Processing Section -->
+        <section class="processing-section" id="processingSection" style="display: none;">
+            <div class="processing-card">
+                <div class="processing-header">
+                    <i class="fas fa-robot"></i>
+                    <h3>Processing Contract</h3>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-text" id="progressText">Initializing...</div>
+                </div>
+                <div class="processing-steps">
+                    <div class="step" id="step1">
+                        <i class="fas fa-eye"></i>
+                        <span>OCR Extraction</span>
+                        <div class="step-status"></div>
+                    </div>
+                    <div class="step" id="step2">
+                        <i class="fas fa-cut"></i>
+                        <span>Clause Segmentation</span>
+                        <div class="step-status"></div>
+                    </div>
+                    <div class="step" id="step3">
+                        <i class="fas fa-tags"></i>
+                        <span>Entity Recognition</span>
+                        <div class="step-status"></div>
+                    </div>
+                    <div class="step" id="step4">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Risk Analysis</span>
+                        <div class="step-status"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section" id="resultsSection" style="display: none;">
+            <div class="results-header">
+                <h2><i class="fas fa-check-circle"></i> Analysis Complete</h2>
+                <div class="download-buttons">
+                    <div class="download-dropdown">
+                        <button class="download-btn dropdown-trigger" onclick="toggleDownloadMenu()">
+                            <i class="fas fa-download"></i> Download Report <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu" id="downloadMenu">
+                            <button class="dropdown-item" onclick="downloadBasicReport()">
+                                <i class="fas fa-file-alt"></i> Basic Report (MD)
+                            </button>
+                            <button class="dropdown-item" onclick="downloadComprehensiveReport()">
+                                <i class="fas fa-file-text"></i> Complete Report (MD)
+                            </button>
+                            <button class="dropdown-item" onclick="downloadPDFReport()">
+                                <i class="fas fa-file-pdf"></i> PDF Report
+                            </button>
+                        </div>
+                    </div>
+                    <button class="new-analysis-btn" onclick="resetApp()">
+                        <i class="fas fa-plus"></i> New Analysis
+                    </button>
+                </div>
+            </div>
+
+            <div class="results-grid">
+                <!-- Executive Summary -->
+                <div class="result-card summary-card">
+                    <h3><i class="fas fa-clipboard-list"></i> Executive Summary</h3>
+                    <div class="summary-content" id="summaryContent">
+                        <!-- Summary will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Key Terms -->
+                <div class="result-card terms-card">
+                    <h3><i class="fas fa-key"></i> Key Terms</h3>
+                    <div class="terms-list" id="termsList">
+                        <!-- Terms will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Risk Analysis -->
+                <div class="result-card risks-card">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Risk Analysis</h3>
+                    <div class="risks-container" id="risksContainer">
+                        <!-- Risks will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Clauses & Entities -->
+                <div class="result-card clauses-card">
+                    <h3><i class="fas fa-list-ul"></i> Contract Clauses</h3>
+                    <div class="clauses-container" id="clausesContainer">
+                        <!-- Clauses will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Recommendations -->
+                <div class="result-card recommendations-card">
+                    <h3><i class="fas fa-lightbulb"></i> Recommendations</h3>
+                    <div class="recommendations-list" id="recommendationsList">
+                        <!-- Recommendations will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Open Questions -->
+                <div class="result-card questions-card">
+                    <h3><i class="fas fa-question-circle"></i> Open Questions</h3>
+                    <div class="questions-list" id="questionsList">
+                        <!-- Questions will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Error Section -->
+        <section class="error-section" id="errorSection" style="display: none;">
+            <div class="error-card">
+                <i class="fas fa-exclamation-circle"></i>
+                <h3>Processing Error</h3>
+                <p id="errorMessage"></p>
+                <button class="retry-btn" onclick="resetApp()">
+                    <i class="fas fa-redo"></i> Try Again
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast" id="toast"></div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

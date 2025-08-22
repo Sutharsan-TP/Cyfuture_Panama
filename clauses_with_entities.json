@@ -1,0 +1,81 @@
+[
+    {
+        "clause_title": "1. Definitions",
+        "clause_text": "For purposes of this Agreement, the following terms shall have the meanings specified below:\n\nAgreement means this Agreement and any schedules or exhibits attached hereto.\n\nParty means either party to this Agreement.\n\nEffective Date means the date first written above.",
+        "entities": [
+            {
+                "entity_group": "LABEL_0",
+                "score": 0.7358999848365784,
+                "word": "For purposes of this Agreement, the following terms shall have the meanings specified below:\n\nAgreement means this Agreement and any schedules or exhibits attached hereto.\n\nParty means either party to this Agreement.\n\nEffective Date means the date first written above"
+            },
+            {
+                "entity_group": "LABEL_1",
+                "score": 0.723800003528595,
+                "word": "."
+            }
+        ]
+    },
+    {
+        "clause_title": "2. Purpose",
+        "clause_text": "The parties wish to establish a business relationship in connection with [describe purpose].",
+        "entities": [
+            {
+                "entity_group": "LABEL_0",
+                "score": 0.6735000014305115,
+                "word": "The parties wish to establish a business relationship in connection with [describe purpose]."
+            }
+        ]
+    },
+    {
+        "clause_title": "3. Term",
+        "clause_text": "The term of this Agreement shall commence on the Effective Date and continue for a period of [number] months unless terminated earlier as provided herein. This Agreement shall automatically renew for successive terms of [number] months, unless either party provides written notice of non-renewal at least thirty (30) days prior to the end of the then-current term.",
+        "entities": [
+            {
+                "entity_group": "LABEL_0",
+                "score": 0.6315000057220459,
+                "word": "The term of this Agreement shall commence on the Effective Date and continue for a period of [number] months unless terminated earlier as provided herein."
+            },
+            {
+                "entity_group": "LABEL_1",
+                "score": 0.5228999853134155,
+                "word": " This"
+            },
+            {
+                "entity_group": "LABEL_0",
+                "score": 0.6664999723434448,
+                "word": " Agreement shall automatically renew for successive terms of [number] months, unless either party provides written notice of non-renewal at least thirty (30) days prior to the end of the then-current term"
+            },
+            {
+                "entity_group": "LABEL_1",
+                "score": 0.6632000207901001,
+                "word": "."
+            }
+        ]
+    },
+    {
+        "clause_title": "4. Termination",
+        "clause_text": "Either party may terminate this Agreement upon thirty (30) days' written notice to the other party. In addition, either party may terminate this Agreement immediately upon written notice if the other party breaches any material term of this Agreement and fails to cure such breach within fifteen (15) days after receipt of written notice of such breach. Upon termination, each party shall return or, at the request of the other party, destroy all Confidential Information of the other party in its possession or control.",
+        "entities": [
+            {
+                "entity_group": "LABEL_0",
+                "score": 0.6858999729156494,
+                "word": "Either party may terminate this Agreement upon thirty (30) days' written notice to the other party"
+            },
+            {
+                "entity_group": "LABEL_1",
+                "score": 0.5274999737739563,
+                "word": "."
+            },
+            {
+                "entity_group": "LABEL_0",
+                "score": 0.7052000164985657,
+                "word": " In addition, either party may terminate this Agreement immediately upon written notice if the other party breaches any material term of this Agreement and fails to cure such breach within fifteen (15) days after receipt of written notice of such breach. Upon termination, each party shall return or, at the request of the other party, destroy all Confidential Information of the other party in its possession or control"
+            },
+            {
+                "entity_group": "LABEL_1",
+                "score": 0.6527000069618225,
+                "word": "."
+            }
+        ]
+    }
+]
